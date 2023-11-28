@@ -2424,14 +2424,14 @@ body.homepage.is-preload #header:after {
 
 /* Banner */
 
-#vote {
+#main {
     background: #fff;
     text-align: center;
     padding: 4.5em 0 4.5em 0;
     margin-bottom: 0;
 }
 
-#vote header > p {
+#main header > p {
     margin-bottom: 0;
 }
 
@@ -2689,7 +2689,7 @@ body.homepage.is-preload #header:after {
     }
 
     /* Banner */
-    #vote {
+    #main {
         padding-left: 2em;
         padding-right: 2em;
     }
@@ -3087,7 +3087,7 @@ body.homepage.is-preload #header:after {
     }
 
     /* Banner */
-    #vote {
+    #main {
         padding: 3em 2em 3em 2em;
     }
 
