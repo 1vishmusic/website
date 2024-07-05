@@ -1,8 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+/*@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url("fontawesome-all.min.css");
 
+@font-face {
+    font-family: UniSansThinCAPS;
+    src: url("../font/uni-sans.thin-caps.otf") format("opentype");
+}
+
 :root {
-    --main-color: #ba1e1e;
+    --main-color: #06707c;
+    --main-color-clicked: #09a2b4;
     --background-color: rgba(0, 0, 0, 0.5);
     --border-color: rgba(192, 192, 192, 0.55);
 }
@@ -95,7 +102,7 @@ body {
     color: #5b5b5b;
     font-size: 15pt;
     line-height: 1.85em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'UniSansThinCAPS', sans-serif;
     font-weight: 300;
 }
 
@@ -113,8 +120,19 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 input, textarea, select {
     font-size: 15pt;
     line-height: 1.85em;
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
     font-weight: 300;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+td {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -166,7 +184,7 @@ a {
 }
 
 a:hover {
-    color: #ef8376;
+    color: var(--main-color-clicked);
     border-bottom-color: transparent;
 }
 
@@ -190,10 +208,6 @@ blockquote {
 
 p, ul, ol, dl, table {
     margin-bottom: 1em;
-}
-
-p {
-    text-align: justify;
 }
 
 br.clear {
@@ -1944,7 +1958,7 @@ ul.icons li a {
 }
 
 ul.icons li a:hover {
-    color: #ef8376;
+    color: var(--main-color-clicked);
 }
 
 /* Form */
@@ -2092,7 +2106,7 @@ input[type="reset"]:hover,
 button:hover,
 .button:hover {
     color: #fff;
-    background: #ef8376;
+    background: var(--main-color-clicked);
 }
 
 input[type="button"].alt,
@@ -2191,7 +2205,7 @@ header .icon.circled {
 
 #header {
     position: relative;
-    background: linear-gradient(var(--background-color), var(--background-color)), url("../image/header.webp");
+    background: linear-gradient(var(--background-color), var(--background-color)), url("../image/background.jpg");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -2285,18 +2299,44 @@ body.homepage #header:after {
     width: 100%;
     height: 100%;
     opacity: 0;
-    -moz-transition: opacity 2.5s ease-in-out;
-    -webkit-transition: opacity 2.5s ease-in-out;
-    -ms-transition: opacity 2.5s ease-in-out;
-    transition: opacity 2.5s ease-in-out;
-    -moz-transition-delay: 0.5s;
-    -webkit-transition-delay: 0.5s;
-    -ms-transition-delay: 0.5s;
-    transition-delay: 0.5s;
+}
+
+.butterflies {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.butterfly {
+    position: fixed;
+}
+
+.inner {
+    z-index: 2;
+}
+
+#header {
+    z-index: 0;
+}
+
+#main {
+    position: sticky;
+    z-index: 2;
 }
 
 body.homepage.is-preload #header:after {
-    opacity: 1;
+    opacity: 0.5;
+}
+
+.blinking {
+    animation: blinker 150ms step-start infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Nav */
@@ -2399,7 +2439,7 @@ body.homepage.is-preload #header:after {
 }
 
 .dropotron li:hover {
-    color: #ef8376;
+    color: var(--main-color-clicked);
 }
 
 .dropotron li a, .dropotron li span {
@@ -2572,7 +2612,7 @@ body.homepage.is-preload #header:after {
 }
 
 .carousel .forward:hover:before, .carousel .backward:hover:before {
-    background-color: rgba(239, 131, 118, 0.75);
+    background-color: var(--main-color-clicked);
 }
 
 .carousel .forward {
@@ -2855,8 +2895,7 @@ body.homepage.is-preload #header:after {
     button,
     .button {
         display: block;
-        padding: 0;
-        line-height: 3em;
+        padding: 10px;
         width: 100%;
     }
 
@@ -3140,26 +3179,24 @@ body.homepage.is-preload #header:after {
 }
 
 /* Concert */
-.concerts {
-    margin: 0 10% 0 10%;
+@media (min-width: 820px) {
+    .concerts {
+        display: flex;
+        justify-content: center;
+    }
+    .concerts-table {
+        width: 60%;
+    }
 }
 
-.concerts p {
-    margin-left: 1em;
+td {
+    vertical-align: middle;
 }
 
-.concert {
-    margin: 0 0 6px 6px;
+td p {
+    vertical-align: middle;
 }
 
-.concert * {
-    display: inline-block;
-}
-
-.concert-button {
-    margin-right: 20px;
-}
-
-.concert-miniature {
-    margin: 0 0 6px;
+table, th, td {
+    border: 10px solid transparent;
 }
