@@ -33,7 +33,7 @@
             $body.removeClass('is-preload');
         }, 100);
 
-        $('video').play();
+        document.querySelector('video').play().catch((ignore) => {});
 
 		window.setTimeout(() => {
 			$('.blinking-header').removeClass('blinking');
