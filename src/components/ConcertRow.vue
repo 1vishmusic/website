@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import type {EventResponse} from "@/api/EventController";
 
-const props = defineProps<{
+defineProps<{
 				event: EventResponse
 }>()
 </script>
 
 <template>
 				<tr>
-								<td><a class="button concert-button">{{event.name}}</a></td>
-								<td>{{ event.date }}, <a :href="event.place_webpage ?? undefined">{{ event.place }}</a></td>
+								<td><a :href="event.webpage ?? undefined" target="_blank" class="button concert-button" rel="noopener noreferrer">{{event.name}}</a></td>
+								<td>{{ event.date }}, <a :href="event.place_webpage ?? undefined" target="_blank" rel="noopener noreferrer">{{ event.place }}</a></td>
 				</tr>
 </template>
 
