@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url("fontawesome-all.min.css");
+
+@font-face {
+    font-family: UniSansThinCAPS;
+    src: url("../font/uni-sans.thin-caps.otf") format("opentype");
+}
 
 :root {
     --main-color: #ba1e1e;
-    --background-color: rgba(0, 0, 0, 0.5);
+    --background-color: rgba(0, 0, 0, 0.7);
     --border-color: rgba(192, 192, 192, 0.55);
 }
 
@@ -30,6 +35,7 @@ section, summary, time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    scroll-behavior: smooth;
 }
 
 article, aside, details, figcaption, figure,
@@ -95,11 +101,11 @@ body {
     color: #5b5b5b;
     font-size: 15pt;
     line-height: 1.85em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'UniSansThinCAPS', sans-serif;
     font-weight: 300;
 }
 
-body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+main.is-preload *, main.is-preload *:before, main.is-preload *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
     -ms-animation: none !important;
@@ -113,8 +119,20 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 input, textarea, select {
     font-size: 15pt;
     line-height: 1.85em;
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
     font-weight: 300;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+td {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2191,7 +2209,7 @@ header .icon.circled {
 
 #header {
     position: relative;
-    background: linear-gradient(var(--background-color), var(--background-color)), url("../image/header.webp");
+    background: linear-gradient(var(--background-color), var(--background-color)), url("../../../src/assets/image/header.webp");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -2266,16 +2284,16 @@ header .icon.circled {
     margin: 1em 0 0 0;
 }
 
-body.homepage #header {
+main.homepage #header {
     height: 100vh;
     min-height: 40em;
 }
 
-body.homepage #header h1 {
+main.homepage #header h1 {
     font-size: 4em;
 }
 
-body.homepage #header:after {
+main.homepage #header:after {
     content: '';
     background: #1C0920;
     display: block;
@@ -2295,7 +2313,7 @@ body.homepage #header:after {
     transition-delay: 0.5s;
 }
 
-body.homepage.is-preload #header:after {
+main.homepage.is-preload #header:after {
     opacity: 1;
 }
 
@@ -2855,8 +2873,7 @@ body.homepage.is-preload #header:after {
     button,
     .button {
         display: block;
-        padding: 0;
-        line-height: 3em;
+        padding: 10px;
         width: 100%;
     }
 
@@ -3022,21 +3039,21 @@ body.homepage.is-preload #header:after {
         color: #fff;
     }
 
-    body.navPanel-visible #page-wrapper {
+    main.navPanel-visible #page-wrapper {
         -moz-transform: translateY(50vh);
         -webkit-transform: translateY(50vh);
         -ms-transform: translateY(50vh);
         transform: translateY(50vh);
     }
 
-    body.navPanel-visible #navButton {
+    main.navPanel-visible #navButton {
         -moz-transform: translateY(50vh);
         -webkit-transform: translateY(50vh);
         -ms-transform: translateY(50vh);
         transform: translateY(50vh);
     }
 
-    body.navPanel-visible #navPanel {
+    main.navPanel-visible #navPanel {
         -moz-transform: translateY(0);
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -3073,17 +3090,17 @@ body.homepage.is-preload #header:after {
         margin-bottom: 2.5em;
     }
 
-    body.homepage #header {
+    main.homepage #header {
         min-height: 0;
         padding: 5.5em 0 5em 0;
         height: auto;
     }
 
-    body.homepage #header:before {
+    main.homepage #header:before {
         display: none;
     }
 
-    body.homepage #header h1 {
+    main.homepage #header h1 {
         font-size: 2.5em;
     }
 
@@ -3140,26 +3157,50 @@ body.homepage.is-preload #header:after {
 }
 
 /* Concert */
-.concerts {
-    margin: 0 10% 0 10%;
+/* Concert */
+@media (min-width: 820px) {
+    .concerts {
+        display: flex;
+        justify-content: center;
+    }
+    .concerts-table {
+        width: 60%;
+    }
 }
 
-.concerts p {
-    margin-left: 1em;
+td {
+    vertical-align: middle;
 }
 
-.concert {
-    margin: 0 0 6px 6px;
+td p {
+    vertical-align: middle;
 }
 
-.concert * {
-    display: inline-block;
+table, th, td {
+    border: 10px solid transparent;
 }
 
-.concert-button {
-    margin-right: 20px;
+p {
+    text-align: center;
 }
 
-.concert-miniature {
-    margin: 0 0 6px;
+.documents {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+@media (max-width: 500px) {
+    .documents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .documents .button {
+        padding: 10px
+    }
 }
