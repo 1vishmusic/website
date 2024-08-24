@@ -138,5 +138,18 @@ setTimeout(() => {
 														</div>
 										</div>
 						</div>
-  </main>
+						<div id="navPanel">
+										<nav><a class="link depth-0" href="#about" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span
+														class="indent-0"></span>O kapele</a><a class="link depth-0" href="#concerts"
+																																																					style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span
+														class="indent-0"></span>Koncerty</a><RouterLink class="link depth-0" to="/pro-poradatele"
+																																																					style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span
+														class="indent-0"></span>Pro pořadatele</RouterLink><a class="link depth-0" href="#footer"
+																																																											style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span
+														class="indent-0"></span>Kontakt</a></nav>
+						</div>
+						<div id="navButton"><a href="#navPanel" class="toggle" @click="() => {
+										homepageClasses = homepageClasses.length === 1 ? ['homepage', 'navPanel-visible'] : ['homepage']
+						}"></a></div>
+		</main>
 </template>

@@ -2995,7 +2995,7 @@ main.homepage.is-preload #header:after {
         z-index: 1;
         display: block;
         text-decoration: none;
-        padding: 0.5em;
+        padding: 0.7em;
         color: #ddd;
         border: 0;
         border-top: dotted 1px rgba(255, 255, 255, 0.05);
@@ -3008,6 +3008,7 @@ main.homepage.is-preload #header:after {
     #navPanel .link.depth-0 {
         color: #fff;
         font-weight: 600;
+        text-align: center;
     }
 
     #navPanel .indent-1 {
