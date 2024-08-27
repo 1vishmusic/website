@@ -2487,10 +2487,6 @@ main.homepage.is-preload #header:after {
 
 /* Main */
 
-#concerts {
-    margin-bottom: 0;
-}
-
 #concerts section:first-of-type {
     padding-top: 2em;
 }
@@ -3202,6 +3198,37 @@ p {
     }
 
     .documents .button {
-        padding: 10px
+        padding: 10px;
     }
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px; /* mezera mezi čtverci */
+    width: 150vmin; /* zajištění toho, aby grid zůstal čtvercový */
+    height: 1fr;
+
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        width: 75vmin;
+    }
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background-size: cover !important;
+    background-position: center center !important;
 }
