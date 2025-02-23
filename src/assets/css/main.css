@@ -2209,7 +2209,7 @@ header .icon.circled {
 
 #header {
     position: relative;
-    background: linear-gradient(var(--background-color), var(--background-color)), url("../../../src/assets/image/header.webp");
+    background: linear-gradient(var(--background-color), var(--background-color)), url("../../../src/assets/image/header.jpg");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;

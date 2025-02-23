@@ -69,7 +69,7 @@ const overlay = ref(false)
 
 																				<div class="row">
 																								<div class="col-6 col-12-mobile">
-																												<img style="max-width: 100%" src="@/assets/image/band.png" alt="preview">
+																												<img style="max-width: 100%" src="@/assets/image/band.jpg" alt="preview">
 																								</div>
 																								<div class="col-6 col-12-mobile">
 																												<p>
