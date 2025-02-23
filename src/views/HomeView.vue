@@ -37,7 +37,7 @@ const overlay = ref(false)
 																<!-- Inner -->
 																<div class="inner">
 																				<header>
-																								<h1><a href="index.html" id="logo">1VISH</a></h1>
+																								<h1><a href="#about" id="logo">1VISH</a></h1>
 																								<hr/>
 																								<p>Oficiální stránky kapely 1VISH</p>
 																				</header>
