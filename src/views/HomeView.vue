@@ -23,6 +23,9 @@ setTimeout(() => {
 }, 100)
 
 const overlay = ref(false)
+
+const mailEncoded = 'bWFpbHRvOmJhbmRAMXZpc2htdXNpYy5jb20='
+const mailDecoded = atob(mailEncoded)
 </script>
 
 <style>
@@ -110,6 +113,28 @@ const overlay = ref(false)
 																				</div>
 																</article>
 
+																<article id="videos" class="container special">
+																				<header>
+																								<h2><a href="#videos">Videoklipy</a></h2>
+																								<p>Odebírej nás na platformě <a href="https://www.youtube.com/1vishmusic">YouTube</a>, aby ti neutekl žádný nový videoklip!</p>
+																				</header>
+
+																				<div class="videos row">
+																								<div class="col-6 col-12-mobile">
+																												<iframe src="https://www.youtube.com/embed/oaptkfD6qro?si=WdR8AWo1WWZs2sLZ"
+																																				title="YouTube video player" frameborder="0"
+																																				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+																																				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+																								</div>
+																								<div class="col-6 col-12-mobile">
+																												<iframe src="https://www.youtube.com/embed/d7V32Ut3lyQ?si=M2I5l1HRymTziI1d"
+																																				title="YouTube video player" frameborder="0"
+																																				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+																																				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+																								</div>
+																				</div>
+																</article>
+
 																<article id="gallery" class="container special">
 																				<header>
 																								<h2><a href="#gallery">Fotky</a></h2>
@@ -117,7 +142,8 @@ const overlay = ref(false)
 																				</header>
 																				<div class="gallery">
 																								<div class="gallery-grid">
-																												<Gallery v-for="album in albums" @on-overlay-open="overlay = true" @on-overlay-close="overlay = false" :album="album" />
+																												<Gallery v-for="album in albums" @on-overlay-open="overlay = true"
+																																					@on-overlay-close="overlay = false" :album="album"/>
 																								</div>
 																				</div>
 																</article>
@@ -156,8 +182,8 @@ const overlay = ref(false)
 																																								class="label">TikTok</span></a>
 																																</li>
 																																<li>
-																																				<a href="https://twitter.com/1VISHArtist" class="icon brands fa-twitter"><span
-																																								class="label">Twitter</span></a>
+																																				<a :href="mailDecoded" class="icon solid fa-envelope"><span
+																																								class="label">Email</span></a>
 																																</li>
 																												</ul>
 																								</section>
@@ -190,3 +216,14 @@ const overlay = ref(false)
 						}"></a></div>
 				</main>
 </template>
+
+<style>
+.videos .col-6 {
+				height: 21em;
+}
+
+iframe {
+				width: 100%;
+				height: 100%;
+}
+</style>
