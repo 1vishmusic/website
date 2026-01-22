@@ -16,19 +16,24 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm ci
 
       - name: Build project
-        run: npm run build
+        run: pnpm run build
 
       - name: Generate 404 fallback page
         run: cp ./dist/index.html ./dist/404.html
