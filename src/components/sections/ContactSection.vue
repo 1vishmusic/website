@@ -25,7 +25,7 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
 </script>
 
 <template>
-				<div id="kontakt" class="py-5 bg-black position-relative overflow-hidden">
+				<div id="kontakt" class="py-5 bg-darker position-relative overflow-hidden">
 								<div class="background-glow"></div>
 
 								<div class="container py-5 position-relative z-2 text-center">

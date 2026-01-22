@@ -15,12 +15,13 @@ import SectionTitle from "@/components/SectionTitle.vue";
 																				<SectionTitle class="text-lg-start text-center mb-4">O kapele</SectionTitle>
 																				<p class="fw-light fs-5 text-secondary text-start">
 																								Jsme česká rocková kapela 1VISH pocházející z Příbrami a jejího okolí, na scéně působíme
-																								teprve od začátku roku 2022. Za tu dobu už jsme ale stačili odehrát několik koncertů a
-																								vypustit videoklipy k singlům Time To Love a Turn you on.
+																								teprve od začátku roku 2022. Za tu dobu už jsme ale stačili odehrát několik desítek
+																								koncertů a vypustit ven několik nahrávek.
 																				</p>
 																				<p class="fw-light fs-5 text-secondary text-start">
 																								Na koncertech vystupujeme ve složení 2 kytary, bicí a basa. Zaměřujeme se na vlastní tvorbu,
-																								přičemž někdy do setu přidáme i nějaké covery.
+																								přičemž někdy do setu přidáme i nějaké covery. Kdy a kde hrajeme se dozvíte níže v sekci
+																								Koncerty, kterou pravidelně aktualizujeme.
 																				</p>
 																</div>
 												</div>

@@ -19,7 +19,7 @@ defineProps<{
 																				</h4>
 
 																				<div v-if="events && events.length > 0">
-																								<div v-for="gig in events" :key="gig.id"
+																								<div v-for="gig in events" :key="gig.name"
 																													class="event-row d-md-flex align-items-center justify-content-between bg-dark mb-3 p-4 rounded-1 shadow-sm border-start border-4 border-danger hover-lift">
 
 																												<div class="event-date text-center text-md-start mb-3 mb-md-0 me-md-5 min-w-date">
@@ -30,7 +30,7 @@ defineProps<{
 																																<h4 class="h5 fw-bold text-uppercase text-white mb-1">{{ gig.name }}</h4>
 																																<div class="text-secondary small">
 																																				<i class="bi bi-geo-alt me-1 text-danger"></i>
-																																				<a v-if="gig.placeWeb" :href="gig.placeWeb" target="_blank" class="text-decoration-none text-secondary hover-white">
+																																				<a v-if="gig.place_webpage" :href="gig.place_webpage" target="_blank" class="text-decoration-none text-secondary hover-white">
 																																								{{ gig.place }}
 																																				</a>
 																																				<span v-else>{{ gig.place }}</span>

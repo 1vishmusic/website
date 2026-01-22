@@ -4,7 +4,7 @@ import { type EventResponse, fetchEvents } from "@/api/EventController";
 import { type AlbumResponse, fetchGallery } from "@/api/GalleryController";
 
 // Komponenty
-import Navbar from "@/components/Navbar.vue";
+import NavBar from "@/components/NavBar.vue";
 import HeroSection from "@/components/sections/HeroSection.vue";
 import AboutSection from "@/components/sections/AboutSection.vue";
 import ConcertSection from "@/components/sections/ConcertSection.vue";
@@ -24,7 +24,7 @@ fetchGallery().then(g => albums.value = g);
 
 <template>
 				<div class="main-wrapper text-light">
-								<Navbar />
+								<NavBar />
 								<HeroSection />
 								<AboutSection />
 								<ConcertSection :events="events" />
