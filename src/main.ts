@@ -1,5 +1,4 @@
 import '@/assets/css/main.css'
-import '@/assets/css/fontawesome-all.min.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
