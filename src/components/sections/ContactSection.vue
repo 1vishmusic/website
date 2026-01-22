@@ -85,7 +85,7 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
 																												</a>
 																								</div>
 																								<div class="col-md-6">
-																												<a href="//documents/Input_List.pdf" target="_blank" class="download-card">
+																												<a href="/documents/Input_List.pdf" target="_blank" class="download-card">
 																																<i class="bi bi-file-earmark-spreadsheet-fill text-success fs-3 me-3"></i>
 																																<div>
 																																				<span class="d-block fw-bold text-white">Input List</span>
