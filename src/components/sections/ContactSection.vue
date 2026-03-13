@@ -75,7 +75,7 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown));
 																				<h5 class="text-secondary text-uppercase fs-6 ls-2 mb-3">Ke stažení</h5>
 																				<div class="row g-3 mb-5">
 																								<div class="col-md-6">
-																												<a href="/documents/Stage_Plan_v2.pdf" target="_blank" class="download-card">
+																												<a href="/documents/Stage_Plan_v3.pdf" target="_blank" class="download-card">
 																																<i class="bi bi-file-earmark-pdf-fill text-danger fs-3 me-3"></i>
 																																<div>
 																																				<span class="d-block fw-bold text-white">Stageplan 2026</span>
