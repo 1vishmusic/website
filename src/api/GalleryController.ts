@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_ENDPOINT = "https://api.bandportal.1vishmusic.com/web/gallery"
+const API_ENDPOINT = "https://bandportal.cz/api/web/band/1/gallery"
 
 export interface AlbumResponse {
 	title: string;

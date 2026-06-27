@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_ENDPOINT = "https://api.bandportal.1vishmusic.com/web/event"
+const API_ENDPOINT = "https://bandportal.cz/api/web/band/1/event"
 
 export interface EventResponse {
 	name: string
@@ -8,6 +8,7 @@ export interface EventResponse {
 	place: string
 	webpage: string|null
 	place_webpage: string|null
+	tickets: object[]
 }
 
 export function fetchEvents(): Promise<EventResponse[]> {
